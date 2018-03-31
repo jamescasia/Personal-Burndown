@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="burndown.aether.com.burndown.CreateSprint"
+    tools:showIn="@layout/content_create_sprint">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="23dp">
+
+            <LinearLayout
+
+
+
+                android:weightSum="1"
+
+                android:id="@+id/main"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <EditText
+                        android:imeOptions="actionNext"
+                        android:maxLength="18"
+                        android:textSize="27sp"
+                        android:hint="Sprint Name"
+                        android:id="@+id/sprintNameEdit"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp" />
+                </android.support.design.widget.TextInputLayout>
+                <android.support.design.widget.TextInputLayout
+                    android:layout_marginTop="18dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <EditText
+                        android:imeOptions="actionNext"
+                        android:id="@+id/sprintDefnEdit"
+                        android:hint="Define Sprint"
+                        android:maxLength="160"
+                        android:layout_width="match_parent"
+                        android:minHeight="46dp"
+                        android:layout_height="wrap_content" />
+
+                </android.support.design.widget.TextInputLayout>
+                <TextView
+                    android:layout_marginStart="0.5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:alpha="0.96"
+                    android:text="Reason"
+                    />
+
+                <EditText
+                    android:imeOptions="actionNext"
+                    android:id="@+id/sprintResnEdit"
+                    android:hint="Why this task needs to be accomplished"
+                    android:maxLength="160"
+                    android:layout_width="match_parent"
+                    android:minHeight="46dp"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_marginStart="0.5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:alpha="0.96"
+                    android:text="From"
+                    />
+
+                <LinearLayout
+                    android:gravity="center_vertical"
+                    android:layout_gravity="center"
+                    android:weightSum="1"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="0.55"
+                        android:hint="MM/DD/YY"
+                        android:layout_height="wrap_content">
+                        <EditText
+                            android:inputType="date"
+                            android:layout_gravity="start"
+                            android:imeOptions="actionNext"
+                            android:id="@+id/editDateFrom"
+                            android:maxLength="10"
+
+                            android:layout_width="match_parent"
+                            android:layout_height="42dp" />
+                    </android.support.design.widget.TextInputLayout>
+                    <ImageButton
+                        android:id="@+id/pickDateFrom"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_date_range_black_24dp"/>
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="0.43 "
+                        android:layout_height="wrap_content">
+                        <EditText
+                            android:inputType="time"
+                            android:imeOptions="actionNext"
+                            android:id="@+id/editTimeFrom"
+                            android:hint="24:00  "
+                            android:maxLength="5"
+                            android:layout_width="match_parent"
+                            android:layout_height="42dp" />
+                    </android.support.design.widget.TextInputLayout>
+                    <ImageButton
+                        android:id="@+id/pickTimeFrom"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_access_time_black_24dp"/>
+
+
+                </LinearLayout>
+                <TextView
+                    android:layout_marginStart="0.5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:alpha="0.96"
+                    android:text="To"
+                    />
+
+                <LinearLayout
+                    android:gravity="center_vertical"
+                    android:layout_gravity="center"
+                    android:weightSum="1"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="0.55"
+                        android:layout_height="wrap_content">
+                        <EditText
+                            android:hint="MM/DD/YY"
+                            android:id="@+id/editDateTo"
+                            android:maxLength="10"
+                            android:inputType="date"
+                            android:imeOptions="actionNext"
+                            android:layout_width="match_parent"
+                            android:layout_height="42dp" />
+                    </android.support.design.widget.TextInputLayout>
+                    <ImageButton
+                        android:id="@+id/pickDateTo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_date_range_black_24dp"/>
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="0.43"
+                        android:layout_height="wrap_content">
+                        <EditText
+                            android:imeOptions="actionDone"
+                            android:id="@+id/editTimeTo"
+                            android:hint="24:00 "
+                            android:inputType="time"
+                            android:maxLength="5"
+                            android:layout_width="match_parent"
+                            android:layout_height="42dp" />
+                    </android.support.design.widget.TextInputLayout>
+                    <ImageButton
+                        android:id="@+id/pickTimeTo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_access_time_black_24dp"/>
+
+
+
+
+                </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Subtasks"
+                    android:layout_marginTop="15dp"
+                    android:textSize="18sp"/>
+
+
+
+
+            </LinearLayout>
+            <Button
+                android:layout_marginStart="16dp"
+                android:layout_marginBottom="100dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginEnd="1dp"
+                android:text="ADD SUBTASK"
+                android:id="@+id/addSubtask"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+</android.support.constraint.ConstraintLayout>

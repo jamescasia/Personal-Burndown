@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_marginBottom="20dp"
+    android:orientation="vertical"
+    android:weightSum="1"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:layout_marginStart="15dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/subtaskTitle"
+            android:maxLength="18"
+            android:layout_weight="0.65"
+            android:layout_width="0dp"
+            android:layout_height="46dp"
+            android:hint="Subtask name"/>
+        <EditText
+            android:maxLength="8"
+            android:id="@+id/subtaskDuration"
+            android:layout_width="0dp"
+            android:layout_height="46dp"
+            android:layout_weight="0.35"
+            android:hint="24:00"/>
+        <ImageButton
+            android:id="@+id/durationPick"
+            android:layout_width="wrap_content"
+            android:src="@drawable/ic_access_time_black_24dp"
+            android:layout_height="wrap_content" />
+
+
+
+    </LinearLayout>
+    <EditText
+        android:maxLength="160"
+        android:id="@+id/subtaskDefn"
+        android:layout_marginTop="5dp"
+        android:hint="Definition"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</LinearLayout>
